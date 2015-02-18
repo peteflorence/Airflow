@@ -1,6 +1,6 @@
 % inpath = 'E:\project\FluidFlow\Code\data\eccv2014\single_hand2';
-inpath = '/Users/pflomacpro/RLG/airflow';
-outpath = '/Users/pflomacpro/RLG/airflow/outpath';
+inpath = '../';
+outpath = '../outpath';
 mkdir(outpath);
 
 vidname = 'hand2_input';
