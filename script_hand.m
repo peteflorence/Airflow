@@ -1,6 +1,6 @@
 % inpath = 'E:\project\FluidFlow\Code\data\eccv2014\single_hand2';
-inpath = '.\';
-outpath = '.\result\';
+inpath = '/Users/pflomacpro/RLG/airflow';
+outpath = '/Users/pflomacpro/RLG/airflow/outpath';
 mkdir(outpath);
 
 vidname = 'hand2_input';
@@ -53,7 +53,7 @@ motionColorVisualizeOverlay(flow, vid(:,:,1:nF).^0.2, [], ...
 
 %% Run Fluid Flow
 % [ffmean,ffvar] = fluidflow_GMRF3(flow, vA, 'beta2', ffBeta2, 'beta3', ffBeta3, ...
-        'verbose', 1, 'startSigma', 8, 'endSigma', 1, 'nOuterIter', 4, 'nInnerIter', 1, 'timeWin', 15, 'outFrameValidOnly', true);    
+%        'verbose', 1, 'startSigma', 8, 'endSigma', 1, 'nOuterIter', 4, 'nInnerIter', 1, 'timeWin', 15, 'outFrameValidOnly', true);    
 % avgFFStr = avgFFStrthList;
 % tballMag = 6;
 % ffvardet = squeeze(ffvar(:,:,1,:).*ffvar(:,:,3,:) - ffvar(:,:,2,:).^2);
