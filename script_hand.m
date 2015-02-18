@@ -22,13 +22,24 @@ tVarColormap = jet(256);
 quiver_step = 20;
 
 %% Read video
-if exist(fullfile(inpath, [vidname, '.avi']), 'file')
-    vidReader = VideoReader(fullfile(inpath, [vidname, '.avi']));
-else
-    vidReader = VideoReader(fullfile(inpath, [vidname, '.mov']));
+% if exist(fullfile(inpath, [vidname, '.avi']), 'file')
+%     vidReader = VideoReader(fullfile(inpath, [vidname, '.avi']));
+% else
+%     vidReader = VideoReader(fullfile(inpath, [vidname, '.mov']));
+% end
+% vid = read(vidReader);
+% vidfirst10 = vid(1:10,1:5);
+% vid = im2double(colorvid2gray(vid));
+
+
+imlist = dir('/Users/pflomacpro/RLG/Airflow_OSX/Trial8short/*.pgm');
+im = cell(length(imlist),1);
+for i=1:length(imlist)
+     im{i} = imread(strcat('/Users/pflomacpro/RLG/Airflow_OSX/Trial8short/',imlist(i).name));
 end
-vid = read(vidReader);
-vid = im2double(colorvid2gray(vid));
+vid = cell2mat(shiftdim(im,-3));
+%vid = im2double(colorvid2gray(vid));
+
     
 %% Filter the video
 tw = tempThetaList*2;
