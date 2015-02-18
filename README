@@ -1,0 +1,12 @@
+To run the sample code
+
+For Windows user:
+	Run script_hand.m
+	
+For non-Windows user:
+	1. Open matlab and go to the folder [root]/optflow/, run make.m
+	2. Go to the root folder and run script_hand.m
+	
+
+Also, to compute the flow direction (not only to visualize them), uncomment L55-69
+	
