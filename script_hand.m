@@ -1,6 +1,6 @@
 % inpath = 'E:\project\FluidFlow\Code\data\eccv2014\single_hand2';
 inpath = '../';
-outpath = '../outpath';
+outpath = '../outpath/Trial3-20-60/';
 mkdir(outpath);
 
 vidname = 'hand2_input';
@@ -32,10 +32,10 @@ quiver_step = 20;
 % vid = im2double(colorvid2gray(vid));
 
 
-imlist = dir('/Users/pflomacpro/RLG/Airflow_OSX/Trial10/*.pgm');
+imlist = dir('/Users/pflomacpro/RLG/Airflow_OSX/Trial3-20-60/*.pgm');
 im = cell(length(imlist),1);
 for i=1:length(imlist)
-     im{i} = imread(strcat('/Users/pflomacpro/RLG/Airflow_OSX/Trial10/',imlist(i).name));
+     im{i} = imread(strcat('/Users/pflomacpro/RLG/Airflow_OSX/Trial3-20-60/',imlist(i).name));
 end
 vid = cell2mat(shiftdim(im,-3));
 %vid = im2double(colorvid2gray(vid));
