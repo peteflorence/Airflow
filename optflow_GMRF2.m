@@ -163,7 +163,7 @@ parfor t=1:nF
     
     % Solve for variance
     if outVaIf
-        vA{t} = A'*A;
+        vA{t} = A'*A * 1e6;
     end
     A = [];
     if para.verbose == 1
